@@ -81,14 +81,11 @@ The [feature guide](docs/guide/FEATURES.md) covers all of it, including the limi
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A["Write with<br>your stylus"] --> B["Ink groups<br>into regions"]
-    B --> C["Recognized<br>on the tablet"]
-    C --> D["You check<br>and correct"]
-    D --> E["PDF · LaTeX<br>Markdown"]
-    D --> F["Your Git<br>repository"]
-```
+1. **Write** with your stylus.
+2. **Ink groups into regions** by itself when you pause.
+3. **Maths and words are recognized** on the tablet.
+4. **You check and correct** each result.
+5. **Export** to PDF, LaTeX or Markdown, or push to your Git repository.
 
 Your original ink is always kept, and a result that no longer matches its ink is marked out of date, never exported silently.
 
