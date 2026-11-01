@@ -11,7 +11,8 @@ hide:
 
 <div class="nib-hero-text" markdown>
 
-<img src="assets/images/wordmark.png" alt="NibTeXa" class="nib-wordmark">
+<img src="assets/images/wordmark.png" alt="NibTeXa" class="nib-wordmark nib-wordmark-light">
+<img src="assets/images/wordmark-dark.png" alt="NibTeXa" class="nib-wordmark nib-wordmark-dark">
 
 # Write by hand. Get clean LaTeX.
 

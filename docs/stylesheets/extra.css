@@ -72,10 +72,10 @@
   background: none;
 }
 
-[data-md-color-scheme="slate"] .md-typeset .nib-wordmark {
-  padding: 0.4rem 0.7rem;
-  border-radius: 0.6rem;
-  background: var(--nib-paper);
+/* One wordmark per scheme, the same size, so that switching moves nothing. */
+[data-md-color-scheme="default"] .md-typeset .nib-wordmark-dark,
+[data-md-color-scheme="slate"] .md-typeset .nib-wordmark-light {
+  display: none;
 }
 
 .md-typeset .nib-hero h1 {
