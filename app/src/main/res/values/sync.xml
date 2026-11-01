@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Whether Git remotes may use plain HTTP. Only debug builds allow it (src/debug). -->
+    <bool name="allow_cleartext_git">false</bool>
+</resources>

@@ -1,0 +1,100 @@
+/*
+ * The PDF export's page (Phase 12). Always light: it is printed. It is laid out at twice
+ * print size (2 CSS px = 1 PDF point), so the app can capture equations at print resolution;
+ * the app draws them at half size. Text, headings and captions are typeset by the app itself.
+ */
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: serif;
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+/* Spacing is padding, never margin, so each block's box includes it (the app crops on boxes). */
+.block {
+  margin: 0;
+  padding: 8px 0;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 32px;
+}
+
+.heading-1 { font-size: 30px; font-weight: bold; padding-top: 24px; }
+.heading-2 { font-size: 26px; font-weight: bold; padding-top: 20px; }
+.heading-3 { font-size: 22px; font-weight: bold; padding-top: 16px; }
+
+.paragraph {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.math {
+  padding: 12px 0;
+  text-align: center;
+}
+
+.math math-field {
+  display: inline-block;
+  font-size: 28px;
+  border: none;
+  background: transparent;
+  color: #000000;
+  --caret-color: transparent;
+}
+
+.math math-field::part(menu-toggle),
+.math math-field::part(virtual-keyboard-toggle) {
+  display: none;
+}
+
+/* Inline maths (Phase 16): body text size, on a line, with a probe marking the baseline. */
+.inline-math {
+  padding: 8px 4px;
+  text-align: left;
+}
+
+.inline-math math-field {
+  display: inline-block;
+  font-size: 22px;
+  border: none;
+  background: transparent;
+  color: #000000;
+  --caret-color: transparent;
+}
+
+.inline-math math-field::part(menu-toggle),
+.inline-math math-field::part(virtual-keyboard-toggle) {
+  display: none;
+}
+
+.inline-math .baseline {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: baseline;
+}
+
+.figure {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.figure-box {
+  display: inline-block;
+}
+
+.caption {
+  font-size: 18px;
+  padding-top: 8px;
+}

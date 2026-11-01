@@ -1,0 +1,68 @@
+{
+    "format": "nibtexa-export",
+    "version": 1,
+    "booklet": {
+        "id": "b-dsp",
+        "title": "Signals & Systems: week_1"
+    },
+    "pages": [
+        {
+            "id": "p-1",
+            "file": "booklets/b-dsp/pages/p-1.tex",
+            "regions": [
+                {
+                    "id": "r1",
+                    "role": "math",
+                    "readingOrder": 1,
+                    "sourceStrokeIds": [
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "id": "r2",
+                    "role": "math",
+                    "readingOrder": 2,
+                    "sourceStrokeIds": [
+                        3
+                    ]
+                },
+                {
+                    "id": "r3",
+                    "role": "excluded",
+                    "readingOrder": 3,
+                    "sourceStrokeIds": []
+                }
+            ]
+        },
+        {
+            "id": "p-2",
+            "file": "booklets/b-dsp/pages/p-2.tex",
+            "regions": [
+                {
+                    "id": "r1",
+                    "role": "heading",
+                    "readingOrder": 1,
+                    "sourceStrokeIds": [
+                        1
+                    ]
+                },
+                {
+                    "id": "r2",
+                    "role": "text",
+                    "readingOrder": 2,
+                    "sourceStrokeIds": [
+                        2
+                    ]
+                },
+                {
+                    "id": "r3",
+                    "role": "figure",
+                    "readingOrder": 3,
+                    "file": "assets/p-2-r3.png",
+                    "sourceStrokeIds": []
+                }
+            ]
+        }
+    ]
+}

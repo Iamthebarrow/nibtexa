@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Debug builds: as in src/main, plus plain HTTP to the device's loopback address, which
+  `adb reverse tcp:18080 tcp:18080` forwards to the Git test remote on the developer machine
+  (tools/git-test-remote). 10.0.2.2 is not used: on the API 37 image, apps reach the network
+  through the emulated Wi-Fi, where 10.0.2.2 is not the host. Release builds use the main config.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+    </domain-config>
+</network-security-config>

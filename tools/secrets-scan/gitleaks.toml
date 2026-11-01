@@ -1,0 +1,16 @@
+# NibTeXa secrets scan (Phase 8): gitleaks' default rules, minus generated and third-party
+# output. Every file the project writes is still scanned.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Build outputs, caches, the local Python venv and the vendored minified MathLive"
+paths = [
+  '''(^|/)build/''',
+  '''(^|/)\.gradle/''',
+  '''(^|/)\.kotlin/''',
+  '''(^|/)\.idea/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)\.git/''',
+  '''feature/mathedit/src/main/assets/mathedit/mathlive/''',
+]

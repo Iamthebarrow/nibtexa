@@ -1,0 +1,19 @@
+NibTeXa is a notebook for writing by hand on an Android tablet, made for maths, science and engineering notes.
+
+• Write with math, text, drawing and scratch pens, on blank, ruled or grid paper
+• Handwriting turns into LaTeX on your tablet, and you check it before it's used
+• Draw block diagrams, signal flow graphs, circuits and rough graphs: each stroke becomes a clean, attached part
+• Graph equations on the page
+• Export to PDF, LaTeX and Markdown, in columns and with your own margins
+• Import LaTeX, Markdown and PDFs to write on
+• Automatic backups to a folder you choose
+• Commit and push to any Git server you set up
+
+No accounts and no ads.
+
+Please note:
+• Reading handwritten words uses Google ML Kit, which sends usage metrics to Google. Your handwriting stays on your tablet.
+• Reading handwritten maths needs a separate model of about 1.25 GB, which you can download from its authors in Settings. It takes about 1.7 GB of memory while in use, so a tablet with 6 GB or more is best.
+• This is an early version.
+
+NibTeXa is free software under the GNU GPL, version 3, with its source at https://github.com/Iamthebarrow/nibtexa

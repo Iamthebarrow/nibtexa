@@ -1,0 +1,10 @@
+<resources>
+    <string name="mathedit_title">Math editor spike</string>
+    <string name="mathedit_tab_mathlive">MathLive editor</string>
+    <string name="mathedit_tab_mathlive_list">20 equations (MathLive)</string>
+    <string name="mathedit_tab_document">Document (PDF page)</string>
+    <string name="mathedit_laid_out">Blocks: %1$d · Height: %2$.0f px · Failed: %3$d</string>
+    <string name="mathedit_no_latex">(no LaTeX yet)</string>
+    <string name="mathedit_rendered">Rendered: %1$d · Time: %2$.0f ms · Failed: %3$d</string>
+    <string name="mathedit_unsupported">This WebView cannot run the math editor (no message listener support).</string>
+</resources>

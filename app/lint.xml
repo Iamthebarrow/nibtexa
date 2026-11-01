@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!--
+      JGit ships a trust-all X509TrustManager that it uses only when http.sslVerify is false.
+      The app never reads user or system Git config, and GitSync pins http.sslVerify=true in
+      its working copy (GitSyncTest.certificateChecksCannotBeTurnedOffInTheWorkingCopy).
+      See ADR-0006. Only the JGit jar is ignored; the check stays on for everything else.
+    -->
+    <issue id="TrustAllX509TrustManager">
+        <ignore path="**/org.eclipse.jgit-*.jar" />
+    </issue>
+    <!--
+      Release builds are for sideloading onto an arm64 tablet (Phase 10), so they leave out
+      x86_64. -Pnibtexa.releaseAbi=x86_64 builds the same release for x86_64 (emulator, ChromeOS).
+    -->
+    <issue id="ChromeOsAbiSupport" severity="ignore" />
+
+</lint>

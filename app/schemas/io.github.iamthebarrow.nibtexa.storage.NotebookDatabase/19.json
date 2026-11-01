@@ -1,0 +1,626 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 19,
+    "identityHash": "b07b243591344cfd12803dbd4082ae84",
+    "entities": [
+      {
+        "tableName": "booklet",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `updatedAt` INTEGER NOT NULL DEFAULT 0, `cover` INTEGER NOT NULL DEFAULT 0, `createdAt` INTEGER NOT NULL DEFAULT 0, `author` TEXT, `mathAlign` TEXT NOT NULL DEFAULT 'CENTER', `sheet` TEXT NOT NULL DEFAULT 'A4', `landscape` INTEGER NOT NULL DEFAULT 0, `customWidth` REAL NOT NULL DEFAULT 0, `customHeight` REAL NOT NULL DEFAULT 0, `deletedAt` INTEGER, `folderId` TEXT, `titleOnFirstPage` INTEGER NOT NULL DEFAULT 0, `numberedSections` INTEGER NOT NULL DEFAULT 0, `runningHeader` INTEGER NOT NULL DEFAULT 0, `pageMargin` TEXT NOT NULL DEFAULT 'NORMAL', PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "cover",
+            "columnName": "cover",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "author",
+            "columnName": "author",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "mathAlign",
+            "columnName": "mathAlign",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'CENTER'"
+          },
+          {
+            "fieldPath": "sheet",
+            "columnName": "sheet",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'A4'"
+          },
+          {
+            "fieldPath": "landscape",
+            "columnName": "landscape",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "customWidth",
+            "columnName": "customWidth",
+            "affinity": "REAL",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "customHeight",
+            "columnName": "customHeight",
+            "affinity": "REAL",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "deletedAt",
+            "columnName": "deletedAt",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "folderId",
+            "columnName": "folderId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "titleOnFirstPage",
+            "columnName": "titleOnFirstPage",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "numberedSections",
+            "columnName": "numberedSections",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "runningHeader",
+            "columnName": "runningHeader",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "pageMargin",
+            "columnName": "pageMargin",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'NORMAL'"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "page",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `bookletId` TEXT NOT NULL, `position` INTEGER NOT NULL, `nextStrokeId` INTEGER NOT NULL, `nextRegionNumber` INTEGER NOT NULL, `paper` TEXT NOT NULL DEFAULT 'BLANK', `manualOrder` INTEGER NOT NULL DEFAULT 0, `viewScale` REAL, `viewLeft` REAL, `viewTop` REAL, `background` TEXT, `columns` TEXT NOT NULL DEFAULT 'AUTO', `margin` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`bookletId`) REFERENCES `booklet`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bookletId",
+            "columnName": "bookletId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextStrokeId",
+            "columnName": "nextStrokeId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nextRegionNumber",
+            "columnName": "nextRegionNumber",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "paper",
+            "columnName": "paper",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'BLANK'"
+          },
+          {
+            "fieldPath": "manualOrder",
+            "columnName": "manualOrder",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "viewScale",
+            "columnName": "viewScale",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "viewLeft",
+            "columnName": "viewLeft",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "viewTop",
+            "columnName": "viewTop",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "background",
+            "columnName": "background",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "columns",
+            "columnName": "columns",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'AUTO'"
+          },
+          {
+            "fieldPath": "margin",
+            "columnName": "margin",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_page_bookletId",
+            "unique": false,
+            "columnNames": [
+              "bookletId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_page_bookletId` ON `${TABLE_NAME}` (`bookletId`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "booklet",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "bookletId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "stroke",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`pageId` TEXT NOT NULL, `id` INTEGER NOT NULL, `tool` TEXT NOT NULL, `pen` TEXT NOT NULL, `startTimeMillis` INTEGER NOT NULL, `points` TEXT NOT NULL, `kind` TEXT NOT NULL DEFAULT 'GEL', PRIMARY KEY(`pageId`, `id`), FOREIGN KEY(`pageId`) REFERENCES `page`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "pageId",
+            "columnName": "pageId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tool",
+            "columnName": "tool",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pen",
+            "columnName": "pen",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startTimeMillis",
+            "columnName": "startTimeMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "points",
+            "columnName": "points",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "'GEL'"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "pageId",
+            "id"
+          ]
+        },
+        "foreignKeys": [
+          {
+            "table": "page",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pageId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "region",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`pageId` TEXT NOT NULL, `id` TEXT NOT NULL, `role` TEXT NOT NULL, `strokeIds` TEXT NOT NULL, `boundsLeft` REAL NOT NULL, `boundsTop` REAL NOT NULL, `boundsRight` REAL NOT NULL, `boundsBottom` REAL NOT NULL, `readingOrder` INTEGER NOT NULL, `status` TEXT NOT NULL, `sourceStrokeIds` TEXT NOT NULL, `recognizedLatex` TEXT, `confirmedLatex` TEXT, `error` TEXT, `text` TEXT, `headingLevel` INTEGER NOT NULL DEFAULT 1, `caption` TEXT, `recognizedText` TEXT, `auto` INTEGER NOT NULL DEFAULT 0, `align` TEXT, `marks` TEXT, `theorem` TEXT, `listLevel` INTEGER, `newParagraph` INTEGER, `numbered` INTEGER NOT NULL DEFAULT 0, `inlineMath` INTEGER, `pageBreak` INTEGER NOT NULL DEFAULT 0, `typed` INTEGER NOT NULL DEFAULT 0, `picture` TEXT, `graph` TEXT, `diagram` TEXT, PRIMARY KEY(`pageId`, `id`), FOREIGN KEY(`pageId`) REFERENCES `page`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "pageId",
+            "columnName": "pageId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "role",
+            "columnName": "role",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "strokeIds",
+            "columnName": "strokeIds",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "left",
+            "columnName": "boundsLeft",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "top",
+            "columnName": "boundsTop",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "right",
+            "columnName": "boundsRight",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bottom",
+            "columnName": "boundsBottom",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "readingOrder",
+            "columnName": "readingOrder",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceStrokeIds",
+            "columnName": "sourceStrokeIds",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recognizedLatex",
+            "columnName": "recognizedLatex",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "confirmedLatex",
+            "columnName": "confirmedLatex",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "error",
+            "columnName": "error",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "text",
+            "columnName": "text",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "headingLevel",
+            "columnName": "headingLevel",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "1"
+          },
+          {
+            "fieldPath": "caption",
+            "columnName": "caption",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "recognizedText",
+            "columnName": "recognizedText",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "auto",
+            "columnName": "auto",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "align",
+            "columnName": "align",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "marks",
+            "columnName": "marks",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "theorem",
+            "columnName": "theorem",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "listLevel",
+            "columnName": "listLevel",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "newParagraph",
+            "columnName": "newParagraph",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "numbered",
+            "columnName": "numbered",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "inlineMath",
+            "columnName": "inlineMath",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "pageBreak",
+            "columnName": "pageBreak",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "typed",
+            "columnName": "typed",
+            "affinity": "INTEGER",
+            "notNull": true,
+            "defaultValue": "0"
+          },
+          {
+            "fieldPath": "picture",
+            "columnName": "picture",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "graph",
+            "columnName": "graph",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "diagram",
+            "columnName": "diagram",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "pageId",
+            "id"
+          ]
+        },
+        "foreignKeys": [
+          {
+            "table": "page",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "pageId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "clip",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `createdAt` INTEGER NOT NULL, `pinned` INTEGER NOT NULL, `equations` TEXT NOT NULL, `words` TEXT NOT NULL, `drawn` INTEGER NOT NULL, `handwritten` INTEGER NOT NULL, `sourcePage` TEXT, `pictures` TEXT NOT NULL, `content` BLOB NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pinned",
+            "columnName": "pinned",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "equations",
+            "columnName": "equations",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "words",
+            "columnName": "words",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "drawn",
+            "columnName": "drawn",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "handwritten",
+            "columnName": "handwritten",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourcePage",
+            "columnName": "sourcePage",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "pictures",
+            "columnName": "pictures",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "content",
+            "columnName": "content",
+            "affinity": "BLOB",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "folder",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT NOT NULL, `cover` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cover",
+            "columnName": "cover",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b07b243591344cfd12803dbd4082ae84')"
+    ]
+  }
+}

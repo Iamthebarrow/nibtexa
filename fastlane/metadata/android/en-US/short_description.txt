@@ -1,0 +1,1 @@
+Handwritten notes and clean diagrams, with LaTeX and PDF export and Git sync.

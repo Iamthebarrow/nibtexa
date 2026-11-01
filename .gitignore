@@ -1,0 +1,69 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# What the editor's Java and Kotlin tools generate in a module
+core/*/bin/
+feature/*/bin/
+app/bin/
+
+# Local configuration (SDK paths, machine-specific settings)
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+captures/
+.navigation/
+
+# Android build outputs
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+release/
+
+# Native builds (CMake / ndk-build)
+.cxx/
+.externalNativeBuild/
+
+# Kotlin
+.kotlin/
+
+# Signing keys and secrets
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+*.pem
+*.p12
+.env
+.env.*
+
+# Logs and profiling
+*.log
+*.hprof
+*.trace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+*.swp
+*~
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Recognition evaluation (Phase 3): local venv and outputs
+tools/recognition-eval/.venv/
+__pycache__/
+*.pyc
+

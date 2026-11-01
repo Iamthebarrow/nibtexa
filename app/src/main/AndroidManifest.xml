@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Only Git sync uses the network, and only when the user starts it (ADR-0006). Notes,
+         recognition and export stay offline. The math WebView stays blocked by its own CSP
+         and request filter (docs/design/MATH_BRIDGE.md). -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".NibTeXaApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NibTeXa">
+        <!-- Compose re-reads the configuration, so rotation, resizing, keyboard and theme changes
+             are handled without recreating the activity. That keeps the ink surface alive and
+             avoids an intermittent libhwui crash when it is recreated right after a stroke. -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboard|keyboardHidden|navigation|uiMode|density"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".corpus.CorpusCaptureActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboard|keyboardHidden|navigation|uiMode|density"
+            android:exported="false"
+            android:label="@string/corpus_capture" />
+        <activity
+            android:name=".licences.LicencesActivity"
+            android:exported="false"
+            android:label="@string/licences_title" />
+        <activity
+            android:name=".sync.SyncActivity"
+            android:exported="false"
+            android:label="@string/sync_title" />
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NibTeXa" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!-- The math views' WebViews follow the app's light or dark look through these: the page's
+         prefers-color-scheme comes from the theme's isLightTheme (see MathViews.kt). -->
+    <style name="Theme.NibTeXa.MathLight" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.NibTeXa.MathDark" parent="android:Theme.Material.NoActionBar" />
+</resources>

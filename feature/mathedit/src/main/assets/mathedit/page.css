@@ -1,0 +1,76 @@
+/* The app's palette (Phase 13). The background is transparent: the card behind shows through. */
+:root {
+  color-scheme: light dark;
+  --ink: #2b2a28;
+  --muted: #5f594f;
+  --line: #e4dccf;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eee9e1;
+    --muted: #b5aea2;
+    --line: #45423c;
+  }
+}
+
+html, body {
+  margin: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: sans-serif;
+}
+
+body {
+  padding: 12px 16px;
+}
+
+math-field {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 32px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+}
+
+/* Accessibility (Phase 8): the menu is unused, and hidden from screen readers too. */
+math-field::part(menu-toggle) {
+  display: none;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.list > .item {
+  font-size: 24px;
+  padding: 4px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+
+/* A rule between equations, not under the last one. */
+.list > .item:last-child {
+  border-bottom: none;
+}
+
+.list[data-align="center"] > .item {
+  text-align: center;
+}
+
+.list[data-align="right"] > .item {
+  text-align: right;
+}
+
+/* As wide as the equation, so the line's alignment places it. */
+.list math-field {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  border: none;
+}

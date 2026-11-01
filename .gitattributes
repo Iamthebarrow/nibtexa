@@ -1,0 +1,4 @@
+# These must keep LF on every platform, whatever a Windows clone's core.autocrlf says:
+# the wrapper is run by a Unix shell, and the golden files are compared with the exporter's output exactly.
+gradlew text eol=lf
+core/export/src/test/resources/golden/** text eol=lf

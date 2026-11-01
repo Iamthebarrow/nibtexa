@@ -1,0 +1,33 @@
+# NibTeXa text trial prompts (Phase 11, ADR-0007): id<TAB>category<TAB>text
+# Plain text, not LaTeX. Write each line on one line, as you naturally would.
+
+txt-word-signal	word	signal
+txt-word-system	word	system
+txt-word-response	word	response
+txt-word-frequency	word	frequency
+txt-word-theorem	word	Theorem
+txt-word-proof	word	Proof
+txt-pair-open-loop	words	open loop
+txt-pair-step-input	words	step input
+txt-pair-phase-margin	words	phase margin
+txt-pair-zero-order	words	zero order hold
+txt-sentence-fox	sentence	the quick brown fox jumps over the lazy dog
+txt-sentence-real	sentence	Let x be a real number.
+txt-sentence-assume	sentence	Assume the system is linear and time invariant.
+txt-sentence-follows	sentence	It follows that the series converges.
+txt-sentence-example	sentence	For example, consider a first order filter.
+txt-sentence-note	sentence	Note that the gain is negative here.
+txt-tech-pole	technical	the transfer function has a pole at s = -2
+txt-tech-cutoff	technical	the cutoff frequency is 50 Hz
+txt-tech-sample	technical	sample at 8 kHz to avoid aliasing
+txt-tech-stable	technical	the closed loop system is stable
+txt-tech-impulse	technical	the impulse response decays exponentially
+txt-tech-nyquist	technical	use the Nyquist criterion
+txt-tech-bode	technical	sketch the Bode plot of G(s)
+txt-tech-resistor	technical	a 10 kOhm resistor in series
+txt-tech-root	technical	the root locus crosses the imaginary axis
+txt-tech-laplace	technical	take the Laplace transform of both sides
+txt-mixed-page	mixed	see page 12
+txt-mixed-eq	mixed	from equation 3 we get
+txt-mixed-where	mixed	where n is an integer
+txt-mixed-section	mixed	Section 2.1 Background

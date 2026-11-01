@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application>
+        <!-- Not in any menu since Phase 29: debug builds start it with `adb shell am start`. -->
+        <activity
+            android:name=".corpus.CorpusCaptureActivity"
+            android:exported="true"
+            tools:replace="android:exported" />
+    </application>
+</manifest>

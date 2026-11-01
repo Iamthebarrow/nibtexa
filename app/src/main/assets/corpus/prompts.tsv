@@ -1,0 +1,163 @@
+# NibTeXa corpus prompts: id<TAB>category<TAB>latex
+# Corpus v1 (Phase 3): algebra, fractions, scripts, integrals, sums, matrices, Greek letters and engineering notation, plus ambiguous cases and
+# ordinary text. Write each prompt as you naturally would; do not copy the typography.
+
+alg-linear	algebra	2x+3=7
+alg-quadratic	algebra	x^{2}-5x+6=0
+alg-paren	algebra	(a+b)(a-b)=a^{2}-b^{2}
+alg-expand	algebra	(x+1)^{2}=x^{2}+2x+1
+alg-system	algebra	3x-2y=4
+alg-inequality	algebra	-3<2x+1\leq5
+alg-abs	algebra	|x-2|<\epsilon
+alg-poly	algebra	p(x)=a_{n}x^{n}+\cdots+a_{1}x+a_{0}
+alg-ratio	algebra	a:b=c:d
+alg-percent	algebra	15\%\times80=12
+alg-factorial	algebra	n!=n(n-1)!
+alg-binomial	algebra	\binom{n}{k}=\frac{n!}{k!(n-k)!}
+alg-log	algebra	\log_{2}8=3
+alg-ln	algebra	\ln(xy)=\ln x+\ln y
+alg-exp	algebra	e^{a+b}=e^{a}e^{b}
+alg-func	algebra	f(x)=3x^{2}-2x+1
+alg-compose	algebra	(f\circ g)(x)=f(g(x))
+alg-inverse	algebra	f^{-1}(y)=\frac{y-b}{a}
+alg-approx	algebra	\pi\approx3.14159
+alg-decimal	algebra	0.25+1.75=2.0
+frac-simple	fractions	\frac{a}{b}
+frac-nested	fractions	\frac{1}{1+\frac{1}{x}}
+frac-quadratic	fractions	x=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}
+frac-sum	fractions	\frac{1}{2}+\frac{1}{3}=\frac{5}{6}
+frac-mixed	fractions	\frac{x+1}{x-1}
+frac-continued	fractions	a_{0}+\frac{1}{a_{1}+\frac{1}{a_{2}}}
+frac-partial	fractions	\frac{1}{x(x+1)}=\frac{1}{x}-\frac{1}{x+1}
+frac-derivative	fractions	\frac{dy}{dx}
+frac-second	fractions	\frac{d^{2}y}{dx^{2}}
+frac-partial-d	fractions	\frac{\partial f}{\partial x}
+frac-slash	fractions	3/4
+frac-big	fractions	\frac{a^{2}+2ab+b^{2}}{a+b}
+root-square	roots	\sqrt{2}
+root-nth	roots	\sqrt[3]{27}=3
+root-nested	roots	\sqrt{1+\sqrt{x}}
+root-frac	roots	\sqrt{\frac{a}{b}}
+script-sup	scripts	e^{i\pi}+1=0
+script-sub	scripts	x_{n+1}=x_{n}-1
+script-both	scripts	a_{i}^{2}
+script-nested	scripts	e^{x^{2}}
+script-double-sub	scripts	a_{i_{j}}
+script-prime	scripts	f'(x)=2x
+script-dprime	scripts	y''+y=0
+script-tensor	scripts	T_{ij}^{k}
+script-neg	scripts	10^{-3}
+script-dot	scripts	\dot{x}=v
+script-hat	scripts	\hat{n}
+script-bar	scripts	\bar{x}=\frac{1}{n}\sum x_{i}
+script-vec	scripts	\vec{F}=m\vec{a}
+int-definite	integrals	\int_{-1}^{1}x^{2}\,dx
+int-indefinite	integrals	\int\sin x\,dx=-\cos x+C
+int-double	integrals	\iint_{D}f(x,y)\,dA
+int-contour	integrals	\oint_{C}\vec{F}\cdot d\vec{r}
+int-gauss	integrals	\int_{-\infty}^{\infty}e^{-x^{2}}\,dx=\sqrt{\pi}
+int-parts	integrals	\int u\,dv=uv-\int v\,du
+int-sub	integrals	\int_{0}^{\pi/2}\cos\theta\,d\theta=1
+int-frac	integrals	\int\frac{dx}{x}=\ln|x|+C
+lim-basic	limits	\lim_{x\to0}\frac{\sin x}{x}=1
+lim-infinity	limits	\lim_{n\to\infty}(1+\frac{1}{n})^{n}=e
+lim-onesided	limits	\lim_{x\to0^{+}}\frac{1}{x}=\infty
+lim-derivative	limits	f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
+lim-sup	limits	\limsup_{n\to\infty}a_{n}
+sum-basic	sums	\sum_{k=1}^{n}k=\frac{n(n+1)}{2}
+sum-geometric	sums	\sum_{n=0}^{\infty}r^{n}=\frac{1}{1-r}
+sum-double	sums	\sum_{i=1}^{m}\sum_{j=1}^{n}a_{ij}
+sum-taylor	sums	e^{x}=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}
+prod-basic	sums	\prod_{i=1}^{n}x_{i}
+sum-series	sums	1+\frac{1}{2}+\frac{1}{4}+\cdots=2
+matrix-2x2	matrices	\begin{bmatrix}a&b\\c&d\end{bmatrix}
+matrix-det	matrices	\det\begin{pmatrix}a&b\\c&d\end{pmatrix}=ad-bc
+matrix-identity	matrices	I=\begin{bmatrix}1&0\\0&1\end{bmatrix}
+matrix-vector	matrices	A\vec{x}=\vec{b}
+matrix-transpose	matrices	(AB)^{T}=B^{T}A^{T}
+matrix-inverse	matrices	A^{-1}A=I
+matrix-column	matrices	\begin{pmatrix}x\\y\\z\end{pmatrix}
+matrix-3x3	matrices	\begin{bmatrix}1&2&3\\4&5&6\\7&8&9\end{bmatrix}
+matrix-eigen	matrices	A\vec{v}=\lambda\vec{v}
+greek-mix	greek	\alpha+\beta=\gamma
+greek-upper	greek	\Delta\Omega\Sigma
+greek-lower-1	greek	\delta\epsilon\zeta\eta
+greek-lower-2	greek	\theta\kappa\lambda\mu
+greek-lower-3	greek	\nu\xi\rho\sigma
+greek-lower-4	greek	\tau\phi\chi\psi\omega
+greek-upper-2	greek	\Gamma\Theta\Lambda\Phi\Psi
+greek-variants	greek	\varepsilon\vartheta\varphi
+greek-formula	greek	\sigma=\sqrt{\frac{1}{N}\sum(x_{i}-\mu)^{2}}
+fourier	transforms	F(\omega)=\int_{-\infty}^{\infty}f(t)e^{-i\omega t}\,dt
+fourier-inverse	transforms	f(t)=\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)e^{i\omega t}\,d\omega
+fourier-series	transforms	f(x)=\frac{a_{0}}{2}+\sum_{n=1}^{\infty}a_{n}\cos(nx)
+laplace	transforms	\mathcal{L}\{f(t)\}=F(s)
+laplace-def	transforms	F(s)=\int_{0}^{\infty}f(t)e^{-st}\,dt
+laplace-derivative	transforms	\mathcal{L}\{f'(t)\}=sF(s)-f(0)
+laplace-step	transforms	\mathcal{L}\{u(t)\}=\frac{1}{s}
+z-transform	transforms	X(z)=\sum_{n=-\infty}^{\infty}x[n]z^{-n}
+convolution	transforms	(f*g)(t)=\int f(\tau)g(t-\tau)\,d\tau
+control-tf	control	G(s)=\frac{K}{s(s+a)}
+control-closed	control	T(s)=\frac{G(s)}{1+G(s)H(s)}
+control-pid	control	u(t)=K_{p}e(t)+K_{i}\int e\,dt+K_{d}\frac{de}{dt}
+control-second	control	H(s)=\frac{\omega_{n}^{2}}{s^{2}+2\zeta\omega_{n}s+\omega_{n}^{2}}
+control-state	control	\dot{x}=Ax+Bu
+control-output	control	y=Cx+Du
+control-char	control	\det(sI-A)=0
+control-bode	control	20\log_{10}|G(j\omega)|
+electronics-ohm	electronics	V=IR
+electronics-imp	electronics	Z=R+j\omega L
+electronics-power	electronics	P=VI=I^{2}R
+electronics-cap	electronics	Z_{C}=\frac{1}{j\omega C}
+electronics-divider	electronics	V_{out}=V_{in}\frac{R_{2}}{R_{1}+R_{2}}
+electronics-parallel	electronics	\frac{1}{R_{eq}}=\frac{1}{R_{1}}+\frac{1}{R_{2}}
+electronics-rc	electronics	\tau=RC
+electronics-cutoff	electronics	f_{c}=\frac{1}{2\pi RC}
+electronics-kvl	electronics	\sum_{k}V_{k}=0
+electronics-phasor	electronics	V=V_{m}\angle\phi
+electronics-gain	electronics	A_{v}=-\frac{R_{f}}{R_{in}}
+electronics-db	electronics	G_{dB}=20\log_{10}\frac{V_{out}}{V_{in}}
+calc-chain	calculus	\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}
+calc-gradient	calculus	\nabla f=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})
+calc-laplacian	calculus	\nabla^{2}\phi=0
+calc-ode	calculus	\frac{dy}{dt}=-ky
+calc-pde	calculus	\frac{\partial u}{\partial t}=\alpha\frac{\partial^{2}u}{\partial x^{2}}
+calc-taylor	calculus	f(x)\approx f(a)+f'(a)(x-a)
+sets-union	sets	A\cup B
+sets-intersect	sets	A\cap B=\emptyset
+sets-member	sets	x\in\mathbb{R}
+sets-subset	sets	A\subseteq B
+sets-builder	sets	\{x\mid x>0\}
+logic-forall	logic	\forall x\exists y:y>x
+logic-implies	logic	p\Rightarrow q
+logic-iff	logic	p\Leftrightarrow\neg\neg p
+logic-and	logic	p\wedge q\vee r
+trig-identity	trigonometry	\sin^{2}\theta+\cos^{2}\theta=1
+trig-double	trigonometry	\sin2x=2\sin x\cos x
+trig-tan	trigonometry	\tan x=\frac{\sin x}{\cos x}
+trig-euler	trigonometry	e^{i\theta}=\cos\theta+i\sin\theta
+physics-energy	physics	E=mc^{2}
+physics-newton	physics	F=ma
+physics-kinetic	physics	E_{k}=\frac{1}{2}mv^{2}
+physics-wave	physics	v=f\lambda
+physics-coulomb	physics	F=\frac{1}{4\pi\epsilon_{0}}\frac{q_{1}q_{2}}{r^{2}}
+prob-bayes	probability	P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+prob-expect	probability	E[X]=\sum_{x}xP(x)
+prob-normal	probability	\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}
+prob-variance	probability	\mathrm{Var}(X)=E[X^{2}]-E[X]^{2}
+text-plain	text	\text{the quick brown fox}
+text-sentence	text	\text{Let x be a real number.}
+text-label	text	\text{Theorem 1}
+text-mixed	text	\text{if }x>0
+text-where	text	\text{where }n\geq1
+text-note	text	\text{see page 12}
+ambiguous-1l	ambiguous	l1I|
+ambiguous-0o	ambiguous	0oO
+ambiguous-xtimes	ambiguous	x\times x
+ambiguous-zz	ambiguous	z2Z
+ambiguous-uv	ambiguous	u\cup v
+ambiguous-sum-sigma	ambiguous	\Sigma\sum
+ambiguous-minus-dash	ambiguous	a-b
+ambiguous-dot-cdot	ambiguous	a\cdot b.c
+ambiguous-qg9	ambiguous	q9g
+ambiguous-epsilon-in	ambiguous	\epsilon\in

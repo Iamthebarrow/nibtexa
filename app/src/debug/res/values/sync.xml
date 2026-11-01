@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Debug only: the test remote in tools/git-test-remote serves plain HTTP. -->
+    <bool name="allow_cleartext_git">true</bool>
+</resources>
