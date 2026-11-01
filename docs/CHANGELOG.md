@@ -41,5 +41,6 @@ NibTeXa was built in numbered phases. Code comments such as "Phase 26" refer to 
 | 34 | 2026-11-01 | Pen buttons, and a memory warning before the math model's download |
 | 35 | 2026-11-01 | A new eraser: works as the pen moves, Precise and Stroke modes, four sizes and a ring showing its size. Scratch ink became a soft grey pencil |
 | 36 | 2026-11-01 | Documentation reorganized for a public repository |
+| 37 | 2026-11-01 | [Documentation website](https://iamthebarrow.github.io/nibtexa/), published to GitHub Pages |
 
 Migrations keep notes from every earlier database schema readable (`storage/NotebookDatabase.kt`), and the backup reader keeps every earlier format version (`core/export/Backup.kt`).

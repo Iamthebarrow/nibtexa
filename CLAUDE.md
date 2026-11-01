@@ -19,6 +19,7 @@ Start with [docs/README.md](docs/README.md), which indexes everything. [Architec
 - Any change to the math editor's WebView or bridge must keep `docs/design/MATH_BRIDGE.md` true.
 - A change that adds stored data must extend `core/export/Backup.kt` and raise its `VERSION`, keeping older versions readable.
 - Add a line to `docs/CHANGELOG.md` for each phase, and update the guide and design documents it affects.
+- `docs/` is also the website (`zensical.toml`). Add new pages to its `nav`, and use full GitHub URLs for links that leave `docs/`.
 
 ## Commands
 

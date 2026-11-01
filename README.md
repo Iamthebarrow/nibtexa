@@ -136,6 +136,8 @@ Most of the logic is in pure Kotlin modules, tested on the JVM. See [Architectur
 
 ## Documentation
 
+Read it all on the **[documentation website](https://iamthebarrow.github.io/nibtexa/)**.
+
 | | |
 |---|---|
 | **Using the app** | [Features](docs/guide/FEATURES.md) · [Installing](docs/guide/INSTALLING.md) · [Model setup](docs/guide/MODEL_SETUP.md) · [Privacy](docs/PRIVACY.md) |

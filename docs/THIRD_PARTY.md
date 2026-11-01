@@ -1,7 +1,7 @@
 # Third-party components
 
 What NibTeXa ships or downloads, and under which terms. The project is
-GPL-3.0, with the additional permission in [NOTICE.md](../NOTICE.md). Inventory of 2026-10-31, taken from the `:app`
+GPL-3.0, with the additional permission in [NOTICE.md](https://github.com/Iamthebarrow/nibtexa/blob/main/NOTICE.md). Inventory of 2026-10-31, taken from the `:app`
 `releaseRuntimeClasspath` (`./gradlew :app:dependencies --configuration releaseRuntimeClasspath`)
 and the vendored assets.
 
@@ -29,16 +29,16 @@ Status labels:
 | JavaEWAH | 1.2.3 | Apache-2.0 | Bytecode (JGit dependency) | Verified (POM) |
 | slf4j-api | 2.0.18 | MIT | Bytecode (JGit dependency). No logging provider is shipped, so its output goes nowhere. | Verified (bundled `LICENSE.txt`) |
 | commons-codec | 1.22.1 | Apache-2.0 | Bytecode (JGit dependency) | Verified (bundled `LICENSE.txt`) |
-| MathLive, with the KaTeX fonts it bundles | 0.111.1 | MIT | Vendored web assets, hash-pinned in [feature/mathedit/VENDORED.md](../feature/mathedit/VENDORED.md) | Verified |
-| Nunito (variable font), the app's typeface | Google Fonts `main`, fetched 2026-10-28 | SIL Open Font License 1.1 | `res/font/nunito.ttf`, unmodified, hash in [third_party/README.md](../third_party/README.md). The OFL lets the font ship inside other software, provided the font is not sold on its own and the licence travels with it (it is on the licences screen). | Verified (bundled `OFL.txt`) |
-| Baloo 2 (variable font), the NibTeXa title | Google Fonts `main`, fetched 2026-10-29 | SIL Open Font License 1.1 | `res/font/baloo2.ttf`, unmodified, hash in [third_party/README.md](../third_party/README.md); same terms as Nunito, licence on the licences screen. | Verified (bundled `OFL.txt`) |
+| MathLive, with the KaTeX fonts it bundles | 0.111.1 | MIT | Vendored web assets, hash-pinned in [feature/mathedit/VENDORED.md](https://github.com/Iamthebarrow/nibtexa/blob/main/feature/mathedit/VENDORED.md) | Verified |
+| Nunito (variable font), the app's typeface | Google Fonts `main`, fetched 2026-10-28 | SIL Open Font License 1.1 | `res/font/nunito.ttf`, unmodified, hash in [third_party/README.md](https://github.com/Iamthebarrow/nibtexa/blob/main/third_party/README.md). The OFL lets the font ship inside other software, provided the font is not sold on its own and the licence travels with it (it is on the licences screen). | Verified (bundled `OFL.txt`) |
+| Baloo 2 (variable font), the NibTeXa title | Google Fonts `main`, fetched 2026-10-29 | SIL Open Font License 1.1 | `res/font/baloo2.ttf`, unmodified, hash in [third_party/README.md](https://github.com/Iamthebarrow/nibtexa/blob/main/third_party/README.md); same terms as Nunito, licence on the licences screen. | Verified (bundled `OFL.txt`) |
 
 All of these are permissive licences compatible with GPL-3.0. Apache-2.0
 is compatible with GPL-3.0 (not with GPL-2.0-only).
 
 ### Proprietary: Google ML Kit (ADR-0007)
 
-**Google ML Kit Digital Ink Recognition is proprietary.** NibTeXa is distributed with it under the additional permission in [NOTICE.md](../NOTICE.md). POM licences were read on 2026-10-28 from
+**Google ML Kit Digital Ink Recognition is proprietary.** NibTeXa is distributed with it under the additional permission in [NOTICE.md](https://github.com/Iamthebarrow/nibtexa/blob/main/NOTICE.md). POM licences were read on 2026-10-28 from
 the Gradle cache.
 
 | Component | Version | Licence | How it ships | Status |
