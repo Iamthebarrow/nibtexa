@@ -1,0 +1,106 @@
+# The documentation site, published to GitHub Pages by .github/workflows/docs.yml.
+# Docs: https://zensical.org/docs/
+
+[project]
+site_name = "NibTeXa"
+site_description = "Handwritten notes on an Android tablet that become editable LaTeX."
+site_author = "Ian Barrow"
+site_url = "https://iamthebarrow.github.io/nibtexa/"
+repo_url = "https://github.com/Iamthebarrow/nibtexa"
+repo_name = "Iamthebarrow/nibtexa"
+edit_uri = "edit/main/docs/"
+copyright = "Copyright &copy; 2026 Ian Barrow. Free software under GPL-3.0, with an additional permission for Google ML Kit."
+extra_css = ["stylesheets/extra.css"]
+
+nav = [
+    { "Home" = "index.md" },
+    { "Using NibTeXa" = [
+        { "Features" = "guide/FEATURES.md" },
+        { "Installing" = "guide/INSTALLING.md" },
+        { "Model setup" = "guide/MODEL_SETUP.md" },
+        { "Privacy" = "PRIVACY.md" },
+    ]},
+    { "Development" = [
+        { "Architecture" = "development/ARCHITECTURE.md" },
+        { "Testing" = "development/TESTING.md" },
+        { "Releasing" = "development/RELEASING.md" },
+        { "Third-party components" = "THIRD_PARTY.md" },
+    ]},
+    { "Design" = [
+        { "Exports" = "design/EXPORTS.md" },
+        { "Diagrams" = "design/DIAGRAMS.md" },
+        { "Backup format" = "design/BACKUP_FORMAT.md" },
+        { "Math editor security" = "design/MATH_BRIDGE.md" },
+    ]},
+    { "Decisions" = [
+        { "Overview" = "decisions/README.md" },
+        { "ADR-0001: Toolchain" = "decisions/ADR-0001-toolchain-and-minsdk.md" },
+        { "ADR-0002: Ink and strokes" = "decisions/ADR-0002-ink-library-and-stroke-model.md" },
+        { "ADR-0003: Math recognizer" = "decisions/ADR-0003-recognizer.md" },
+        { "ADR-0004: Math editor" = "decisions/ADR-0004-math-editor.md" },
+        { "ADR-0005: Storage and export" = "decisions/ADR-0005-notebook-storage-and-export.md" },
+        { "ADR-0006: Git sync" = "decisions/ADR-0006-git-sync.md" },
+        { "ADR-0007: Text and regions" = "decisions/ADR-0007-text-recognition-and-auto-regions.md" },
+        { "ADR-0008: Maths engine" = "decisions/ADR-0008-maths-engine.md" },
+    ]},
+    { "Changelog" = "CHANGELOG.md" },
+]
+
+[project.theme]
+language = "en"
+variant = "classic"
+logo = "assets/images/icon.png"
+favicon = "assets/images/icon.png"
+features = [
+    "content.code.copy",
+    "navigation.footer",
+    "navigation.indexes",
+    "navigation.instant",
+    "navigation.path",
+    "navigation.sections",
+    "navigation.tabs",
+    "navigation.top",
+    "navigation.tracking",
+    "search.highlight",
+]
+
+[project.theme.font]
+text = "Nunito"
+code = "JetBrains Mono"
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/Iamthebarrow/nibtexa"
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions.toc]
+permalink = true
+
+[project.markdown_extensions.pymdownx.highlight]
+[project.markdown_extensions.pymdownx.inlinehilite]
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+    { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true

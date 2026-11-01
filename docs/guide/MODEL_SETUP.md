@@ -12,7 +12,7 @@ More → Settings → **Download math recognition…**. It's about 1.25 GB, need
 
 ## Making a smaller version yourself
 
-A quantized (int8) version is a quarter of the size, at the accuracy in ADR-0003. You make it on a computer, as described in [tools/recognition-eval/README.md](../../tools/recognition-eval/README.md). The app reads three files from its model folder:
+A quantized (int8) version is a quarter of the size, at the accuracy in ADR-0003. You make it on a computer, as described in [tools/recognition-eval/README.md](https://github.com/Iamthebarrow/nibtexa/blob/main/tools/recognition-eval/README.md). The app reads three files from its model folder:
 
 | File | Size | Source |
 |---|---|---|

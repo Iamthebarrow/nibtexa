@@ -1,0 +1,165 @@
+/* NibTeXa's colours and the home page. The teal and coral come from the app's palette. */
+
+:root {
+  --nib-teal: #2f7a74;
+  --nib-teal-dark: #255f5a;
+  --nib-coral: #c2553b;
+  --nib-paper: #fbf8f1;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: var(--nib-teal);
+  --md-primary-fg-color--light: #4b9a93;
+  --md-primary-fg-color--dark: var(--nib-teal-dark);
+  --md-accent-fg-color: var(--nib-coral);
+  --md-typeset-a-color: var(--nib-teal-dark);
+  --nib-hero-bg: var(--nib-paper);
+  --nib-rule: #e3eaf0;
+  --nib-margin: #f3c2b4;
+  --nib-band: #f4efe6;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1f4f4b;
+  --md-primary-fg-color--light: #2f7a74;
+  --md-primary-fg-color--dark: #173d3a;
+  --md-accent-fg-color: #f09a82;
+  --md-typeset-a-color: #73c4ba;
+  --md-default-bg-color: #1c1b1a;
+  --md-footer-bg-color: #141312;
+  --md-footer-bg-color--dark: #0f0e0d;
+  --nib-hero-bg: #232220;
+  --nib-rule: #33312d;
+  --nib-margin: #5c3a30;
+  --nib-band: #232220;
+}
+
+.md-header__button.md-logo img {
+  border-radius: 6px;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button:not(.md-button--primary) {
+  border-color: #73c4ba;
+  color: #73c4ba;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .nib-hero h1,
+[data-md-color-scheme="slate"] .md-typeset .nib-feature h2,
+[data-md-color-scheme="slate"] .md-typeset .nib-more h2 {
+  color: #f2efe9;
+}
+
+/* The home page takes the full width of its grid. */
+.nib-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin: 0 0 3rem;
+  padding: 2.5rem;
+  border-radius: 1.2rem;
+  background-color: var(--nib-hero-bg);
+  --nib-margin-x: 1.6rem;
+  background-image:
+    linear-gradient(to right, transparent var(--nib-margin-x), var(--nib-margin) var(--nib-margin-x), var(--nib-margin) calc(var(--nib-margin-x) + 1px), transparent calc(var(--nib-margin-x) + 1px)),
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(1.8rem - 1px), var(--nib-rule) calc(1.8rem - 1px), var(--nib-rule) 1.8rem);
+}
+
+.md-typeset .nib-wordmark {
+  display: block;
+  width: min(15rem, 100%);
+  margin: 0 0 1rem;
+  background: none;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .nib-wordmark {
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.6rem;
+  background: var(--nib-paper);
+}
+
+.md-typeset .nib-hero h1 {
+  margin: 0 0 0.8rem;
+  color: var(--md-default-fg-color);
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset .nib-hero p {
+  font-size: 0.85rem;
+}
+
+.md-typeset .nib-hero .md-button {
+  margin: 0.2rem 0.3rem 0.2rem 0;
+  border-radius: 0.6rem;
+}
+
+.md-typeset .nib-hero-note {
+  margin: 0.8rem 0 0;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .nib-hero p.nib-hero-note {
+  font-size: 0.72rem;
+}
+
+.md-typeset .nib-shot p {
+  margin: 0;
+}
+
+.md-typeset .nib-shot img {
+  display: block;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.5rem 1.6rem rgb(0 0 0 / 18%);
+}
+
+.nib-features {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin: 3.5rem 0;
+}
+
+.nib-features-flip {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+}
+
+.nib-features-flip .nib-feature {
+  order: 2;
+}
+
+.md-typeset .nib-feature h2,
+.md-typeset .nib-more h2 {
+  margin-top: 0;
+  font-weight: 800;
+  color: var(--md-default-fg-color);
+}
+
+.nib-more {
+  margin-top: 3.5rem;
+}
+
+@media screen and (max-width: 60em) {
+  .nib-hero,
+  .nib-features,
+  .nib-features-flip {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .nib-hero {
+    --nib-margin-x: 0.7rem;
+    padding: 1.5rem;
+  }
+
+  .nib-features-flip .nib-feature {
+    order: 0;
+  }
+
+  .md-typeset .nib-hero h1 {
+    font-size: 1.7rem;
+  }
+}

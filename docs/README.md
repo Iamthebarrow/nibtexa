@@ -1,5 +1,7 @@
 # NibTeXa documentation
 
+These pages are also published as a website: <https://iamthebarrow.github.io/nibtexa/>.
+
 ## Using the app
 
 - [Features](guide/FEATURES.md): what the app does, and its limits.

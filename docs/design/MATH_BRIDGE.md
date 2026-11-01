@@ -1,9 +1,9 @@
 # Security note: the math editor WebView and bridge
 
 - **Applies to:** `:feature:mathedit`
-  ([MathPageHost.kt](../../feature/mathedit/src/main/java/io/github/iamthebarrow/nibtexa/feature/mathedit/MathPageHost.kt),
-  [BridgeProtocol.kt](../../feature/mathedit/src/main/java/io/github/iamthebarrow/nibtexa/feature/mathedit/bridge/BridgeProtocol.kt),
-  [bridge.js](../../feature/mathedit/src/main/assets/mathedit/bridge.js)).
+  ([MathPageHost.kt](https://github.com/Iamthebarrow/nibtexa/blob/main/feature/mathedit/src/main/java/io/github/iamthebarrow/nibtexa/feature/mathedit/MathPageHost.kt),
+  [BridgeProtocol.kt](https://github.com/Iamthebarrow/nibtexa/blob/main/feature/mathedit/src/main/java/io/github/iamthebarrow/nibtexa/feature/mathedit/bridge/BridgeProtocol.kt),
+  [bridge.js](https://github.com/Iamthebarrow/nibtexa/blob/main/feature/mathedit/src/main/assets/mathedit/bridge.js)).
 
 ## What the WebView is for
 
@@ -51,7 +51,7 @@ captions and LaTeX.
 | Renderer crash | `onRenderProcessGone` returns true and reports an error instead of crashing the app. | 3 |
 
 Vendored libraries are pinned by hash in
-[feature/mathedit/VENDORED.md](../../feature/mathedit/VENDORED.md). MathLive was
+[feature/mathedit/VENDORED.md](https://github.com/Iamthebarrow/nibtexa/blob/main/feature/mathedit/VENDORED.md). MathLive was
 read for remote references before vendoring. The only remote URLs in it are an
 error message about the Compute Engine and an opt-in AWS Polly speech path,
 which needs an AWS SDK that is not shipped.

@@ -4,7 +4,7 @@ How to publish on GitHub and Google Play.
 
 ## What is published
 
-- **The licence:** GPL-3.0, with the additional permission in [NOTICE.md](../../NOTICE.md) that lets the app be distributed with Google ML Kit.
+- **The licence:** GPL-3.0, with the additional permission in [NOTICE.md](https://github.com/Iamthebarrow/nibtexa/blob/main/NOTICE.md) that lets the app be distributed with Google ML Kit.
 - **Reading handwritten words:** Google ML Kit, in the app. It sends usage metrics to Google, which [PRIVACY.md](../PRIVACY.md) discloses.
 - **Reading handwritten maths:** the TexTeller model is **not in the app**, and this project doesn't host it. The app downloads it from its authors when the user asks, after showing where it comes from and what is unsettled about its training data ([ADR-0003](../decisions/ADR-0003-recognizer.md)).
 - **The source:** GPL-3.0 requires the source, with the build scripts, for as long as you distribute a binary. A tag for each release does this.
@@ -33,12 +33,25 @@ unzip -l app/build/outputs/apk/release/app-release.apk | grep -c '\.onnx'
 git ls-files | grep -i keystore
 ```
 
-Then run the [secrets scan](../../tools/secrets-scan/README.md), and:
+Then run the [secrets scan](https://github.com/Iamthebarrow/nibtexa/blob/main/tools/secrets-scan/README.md), and:
 
 - [ ] `docs/THIRD_PARTY.md` matches `./gradlew :app:dependencies --configuration releaseRuntimeClasspath`.
 - [ ] `versionCode` and `versionName` raised in `app/build.gradle.kts`, with a new `fastlane/metadata/android/en-US/changelogs/<versionCode>.txt`.
 - [ ] Checked on a real tablet.
 - [ ] The commit tagged (`git tag v0.1.0`) and pushed, and the APK attached to a GitHub release from that tag.
+
+## The documentation site
+
+`docs/` is published to <https://iamthebarrow.github.io/nibtexa/> by `.github/workflows/docs.yml`, on each push to `main` that changes it. The first time, set **Settings → Pages → Source** to **GitHub Actions**.
+
+To preview it locally, in a virtual environment outside the repository's tracked files:
+
+```sh
+pip install -r requirements-docs.txt
+zensical serve
+```
+
+`docs/index.md` is the site's home page, and `docs/README.md` is the index for people browsing the repository. A new page goes in the `nav` in `zensical.toml` too. Links to files outside `docs/` must be full GitHub URLs, as those files aren't on the site. `docs/assets/images/` holds smaller copies of the store screenshots, so replace them together.
 
 ## Signing
 
@@ -53,7 +66,7 @@ In the Play Console:
 1. **Create a developer account,** and complete its identity checks.
 2. **Create the app,** with the ID `io.github.iamthebarrow.nibtexa`, which can't be changed afterwards.
 3. **The store listing:** text and graphics are in `fastlane/metadata/android/en-US/`. Add a support email.
-4. **Privacy policy:** a link to [PRIVACY.md](../PRIVACY.md) on GitHub.
+4. **Privacy policy:** <https://iamthebarrow.github.io/nibtexa/PRIVACY/>.
 5. **Data safety:**
    - **The developer** receives nothing: no accounts, analytics or ads.
    - **ML Kit in the app** sends Google the usage metrics listed in [PRIVACY.md](../PRIVACY.md), so declare them, following [Google's disclosure](https://developers.google.com/ml-kit/android-data-disclosure).

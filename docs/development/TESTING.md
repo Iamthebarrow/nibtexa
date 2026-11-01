@@ -54,7 +54,7 @@ For long runs, start it with `-gpu swiftshader_indirect`, as its freezes come fr
 
 ## Optional test data
 
-- **Git sync on the emulator** needs the Docker remote and `adb reverse tcp:18080 tcp:18080` ([tools/git-test-remote](../../tools/git-test-remote/README.md)). Without it those tests skip.
+- **Git sync on the emulator** needs the Docker remote and `adb reverse tcp:18080 tcp:18080` ([tools/git-test-remote](https://github.com/Iamthebarrow/nibtexa/blob/main/tools/git-test-remote/README.md)). Without it those tests skip.
 - **Recognition tests** use fixtures in `/data/local/tmp/nibtexa-spike/` and `nibtexa-e2e/`, made by `tools/recognition-eval`, and skip without them. Handwriting datasets stay outside the repository.
 - **The tokenizer check** runs when `NIBTEXA_TEXTELLER_DIR` points at a model folder.
 
@@ -72,7 +72,7 @@ That image has no `pgfplots`. For a graph's export, use a local copy with it add
 
 ## Secrets scan
 
-See [tools/secrets-scan](../../tools/secrets-scan/README.md).
+See [tools/secrets-scan](https://github.com/Iamthebarrow/nibtexa/blob/main/tools/secrets-scan/README.md).
 
 ## What needs real hardware
 
