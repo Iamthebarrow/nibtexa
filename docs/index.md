@@ -28,8 +28,8 @@ A notebook for Android tablets, made for maths, science and engineering notes. Y
 
 <div class="nib-shot" markdown>
 
-![A page with a heading, a clean block diagram and a typeset transfer function](assets/images/page-diagram.png){ .nib-only-light }
-![A page with a heading, a clean block diagram and a typeset transfer function](assets/images/page-diagram-dark.png){ .nib-only-dark }
+<img src="assets/images/page-diagram.png" alt="A page with a heading, a clean block diagram and a typeset transfer function" class="nib-only-light">
+<img src="assets/images/page-diagram-dark.png" alt="A page with a heading, a clean block diagram and a typeset transfer function" class="nib-only-dark">
 
 </div>
 
@@ -51,8 +51,8 @@ Your ink is always kept, and a result that no longer matches its ink is marked o
 
 <div class="nib-shot" markdown>
 
-![A page of typeset signal-processing equations](assets/images/page-equations.png){ .nib-only-light }
-![A page of typeset signal-processing equations](assets/images/page-equations-dark.png){ .nib-only-dark }
+<img src="assets/images/page-equations.png" alt="A page of typeset signal-processing equations" class="nib-only-light">
+<img src="assets/images/page-equations-dark.png" alt="A page of typeset signal-processing equations" class="nib-only-dark">
 
 </div>
 
@@ -74,8 +74,8 @@ Graph the equations you've written. A curve follows when you correct its equatio
 
 <div class="nib-shot" markdown>
 
-![A sine curve and a parabola plotted on the page under their equation](assets/images/page-graph.png){ .nib-only-light }
-![A sine curve and a parabola plotted on the page under their equation](assets/images/page-graph-dark.png){ .nib-only-dark }
+<img src="assets/images/page-graph.png" alt="A sine curve and a parabola plotted on the page under their equation" class="nib-only-light">
+<img src="assets/images/page-graph-dark.png" alt="A sine curve and a parabola plotted on the page under their equation" class="nib-only-dark">
 
 </div>
 
@@ -95,8 +95,8 @@ Everything lives on your tablet. Export PDF, LaTeX projects and Markdown, import
 
 <div class="nib-shot" markdown>
 
-![The library, showing three booklets with previews of their first pages](assets/images/library.png){ .nib-only-light }
-![The library, showing three booklets with previews of their first pages](assets/images/library-dark.png){ .nib-only-dark }
+<img src="assets/images/library.png" alt="The library, showing three booklets with previews of their first pages" class="nib-only-light">
+<img src="assets/images/library-dark.png" alt="The library, showing three booklets with previews of their first pages" class="nib-only-dark">
 
 </div>
 
