@@ -118,7 +118,7 @@
 /* Each screenshot comes in a light and a dark version, and shows the one matching the site's scheme. */
 [data-md-color-scheme="default"] .md-typeset .nib-shot img.nib-only-dark,
 [data-md-color-scheme="slate"] .md-typeset .nib-shot img.nib-only-light {
-  display: none;
+  display: none !important;
 }
 
 .nib-features {
