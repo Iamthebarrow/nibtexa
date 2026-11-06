@@ -28,7 +28,8 @@ A notebook for Android tablets, made for maths, science and engineering notes. Y
 
 <div class="nib-shot" markdown>
 
-![A page with a heading, a clean block diagram and a typeset transfer function](assets/images/page-diagram.png)
+![A page with a heading, a clean block diagram and a typeset transfer function](assets/images/page-diagram.png){ .nib-only-light }
+![A page with a heading, a clean block diagram and a typeset transfer function](assets/images/page-diagram-dark.png){ .nib-only-dark }
 
 </div>
 
@@ -50,7 +51,8 @@ Your ink is always kept, and a result that no longer matches its ink is marked o
 
 <div class="nib-shot" markdown>
 
-![A page of typeset signal-processing equations](assets/images/page-equations.png)
+![A page of typeset signal-processing equations](assets/images/page-equations.png){ .nib-only-light }
+![A page of typeset signal-processing equations](assets/images/page-equations-dark.png){ .nib-only-dark }
 
 </div>
 
@@ -72,7 +74,8 @@ Graph the equations you've written. A curve follows when you correct its equatio
 
 <div class="nib-shot" markdown>
 
-![A sine curve and a parabola plotted on the page under their equation](assets/images/page-graph.png)
+![A sine curve and a parabola plotted on the page under their equation](assets/images/page-graph.png){ .nib-only-light }
+![A sine curve and a parabola plotted on the page under their equation](assets/images/page-graph-dark.png){ .nib-only-dark }
 
 </div>
 
@@ -92,25 +95,8 @@ Everything lives on your tablet. Export PDF, LaTeX projects and Markdown, import
 
 <div class="nib-shot" markdown>
 
-![The library, showing three booklets with previews of their first pages](assets/images/library.png)
-
-</div>
-
-</section>
-
-<section class="nib-features nib-features-flip" markdown>
-
-<div class="nib-feature" markdown>
-
-## Dark mode too
-
-The whole app, including the page and your ink, follows your tablet's light or dark setting.
-
-</div>
-
-<div class="nib-shot" markdown>
-
-![The block diagram page in dark mode](assets/images/page-diagram-dark.png)
+![The library, showing three booklets with previews of their first pages](assets/images/library.png){ .nib-only-light }
+![The library, showing three booklets with previews of their first pages](assets/images/library-dark.png){ .nib-only-dark }
 
 </div>
 
